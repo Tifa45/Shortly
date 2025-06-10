@@ -13,6 +13,14 @@
   --color-hero-bg: hsl(0, 0%, 75%);
   --color-main-bg: hsl(257, 7%, 63%);
   --color-footer-bg: hsl(260, 8%, 14%);
+  --color-text-accent: hsl(0, 0%, 75%);
+}
+* {
+  box-sizing: border-box;
+}
+.the-root{
+  overflow-x: hidden;
+  width: 100%;
 }
 
 html body {
@@ -21,9 +29,40 @@ html body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-.test {
-  @apply text-5xl text-red-400;
+.mob-menu-item {
+  @apply text-lg text-center text-white font-bold font-shortly group-hover:text-black w-full;
 }
+.gpad {
+  @apply px-4 md:px-8 lg:px-16;
+}
+.cta-btn{
+  @apply px-6 py-2 font-shortly text-white font-bold text-lg  bg-prime-light rounded-full hover:opacity-65
+}
+
+
+.hover-underline-animation {
+  display: inline;
+  position: relative;
+  padding-bottom: 4px;
+  
+}
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(180, 66%, 49%);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
