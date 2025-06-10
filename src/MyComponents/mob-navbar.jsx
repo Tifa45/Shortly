@@ -43,7 +43,7 @@ function MobNavbar() {
           <div>
             <Menubar className={" border-none shadow-none px-0 "}>
               <MenubarMenu>
-                <MenubarTrigger asChild className={"px-0"} >
+                <MenubarTrigger asChild className={"px-0"}>
                   <button onClick={menuStateHandler}>
                     {menuState ? (
                       <SquareX size={35} />
@@ -118,15 +118,13 @@ function MobNavbar() {
                 ))}
               </ul>
             </div>
-            <div className=" ml-auto flex justify-center items-center gap-6">
+            <div className=" ml-auto flex justify-center items-center gap-10 lg:pr-22">
               <a href="#">
                 <p className="hover-underline-animation font-shortly text-text-accent font-normal text-lg hover:text-black">
                   Login
                 </p>
               </a>
-              <button className="cta-btn">
-                Sign Up
-              </button>
+              <button className="cta-btn">Sign Up</button>
             </div>
           </>
         )}

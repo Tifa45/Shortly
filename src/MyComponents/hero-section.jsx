@@ -1,12 +1,12 @@
 function HeroSection() {
   return (
     <section id="#" className="lg:mt-6 ">
-      <div className=" lg:flex lg:justify-between lg:flex-row-reverse gpad flex flex-col ">
-        <div className=" lg:min-w-[50%] flex justify-end md:justify-center lg:justify-end -mr-40 sm:mr-0 lg:-mr-40  ">
+      <div className=" lg:flex lg:justify-between items-center lg:flex-row-reverse gpad flex flex-col gap-10 ">
+        <div className=" lg:min-w-[50%] flex justify-end md:justify-center lg:justify-end -mr-40 sm:mr-0 lg:-mr-50  ">
           <img
             src="illustration-working.svg"
             alt="hero"
-            className=" w-fit lg:max-w-xl "
+            className=" w-fit  "
           />
         </div>
         <div className=" flex flex-col gap-4 lg:w-1/2">
