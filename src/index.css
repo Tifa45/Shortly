@@ -9,16 +9,17 @@
   --font-weight-normal: 500;
   --color-prime-dark: hsl(257, 27%, 26%);
   --color-prime-light: hsl(180, 66%, 49%);
+  --color-prime-hover: hsl(180, 90%, 68%);
   --color-red-font: hsl(0, 87%, 67%);
   --color-hero-bg: hsl(0, 0%, 75%);
-  --color-main-bg: hsl(257, 7%, 63%);
+  --color-main-bg: #EFF1F7;
   --color-footer-bg: hsl(260, 8%, 14%);
   --color-text-accent: hsl(0, 0%, 75%);
 }
 * {
   box-sizing: border-box;
 }
-.the-root{
+.the-root {
   overflow-x: hidden;
   width: 100%;
 }
@@ -33,21 +34,22 @@ html body {
   @apply text-lg text-center text-white font-bold font-shortly group-hover:text-black w-full;
 }
 .gpad {
-  @apply px-4 md:px-8 lg:px-16;
+  @apply px-4 md:px-8 lg:px-38;
 }
-.cta-btn{
-  @apply px-6 py-2 font-shortly text-white font-bold text-lg  bg-prime-light rounded-full hover:opacity-65
+.cta-btn {
+  @apply px-6 py-2 font-shortly text-white font-bold text-lg  bg-prime-light rounded-full hover:bg-prime-hover;
 }
-
+.frm-btn {
+  @apply px-6 py-2 font-shortly text-white font-bold text-lg  bg-prime-light rounded-sm hover:bg-prime-hover;
+}
 
 .hover-underline-animation {
   display: inline;
   position: relative;
   padding-bottom: 4px;
-  
 }
 .hover-underline-animation::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -62,7 +64,6 @@ html body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

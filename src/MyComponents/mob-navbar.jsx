@@ -32,7 +32,7 @@ function MobNavbar() {
 
   return (
     <>
-      <div className="w-full px-4 py-8 flex justify-between items-center md:justify-start md:px-8 lg:px-16 ">
+      <div className="w-full  flex justify-between items-center md:justify-start gpad ">
         <div className="flex justify-start flex-shrink-0 items-center">
           <a href="#">
             <img src="logo.svg" alt="logo" />
@@ -117,7 +117,7 @@ function MobNavbar() {
                 ))}
               </ul>
             </div>
-            <div className=" ml-auto flex justify-center items-center gap-10 lg:pr-22">
+            <div className=" ml-auto flex justify-center items-center gap-10 ">
               <a href="#">
                 <p className="hover-underline-animation font-shortly text-text-accent font-normal text-lg hover:text-black">
                   Login
