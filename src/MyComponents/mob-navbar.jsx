@@ -42,9 +42,9 @@ function MobNavbar() {
         {!isDesktop ? (
           <div>
             <Menubar className={" border-none shadow-none px-0 "}>
-              <MenubarMenu>
-                <MenubarTrigger asChild className={"px-0"}>
-                  <button onClick={menuStateHandler}>
+              <MenubarMenu open={menuState} onOpenChange={setMenuState}>
+                <MenubarTrigger asChild className={"px-0 "}>
+                  <button className="" onClick={menuStateHandler}>
                     {menuState ? (
                       <SquareX size={35} />
                     ) : (
@@ -53,12 +53,11 @@ function MobNavbar() {
                   </button>
                 </MenubarTrigger>
                 <MenubarContent
-                  onInteractOutside={menuStateHandler}
                   className={
                     "w-screen bg-transparent border-none shadow-none flex justify-center"
                   }
                 >
-                  <div className="bg-prime-dark w-[90%] sm:w-[80%] rounded-lg px-6 py-8">
+                  <div className="bg-prime-dark w-[90%]  rounded-lg px-6 py-8">
                     <MenubarItem
                       asChild
                       className={"focus:bg-white mb-6 group "}
