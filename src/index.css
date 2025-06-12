@@ -12,7 +12,7 @@
   --color-prime-hover: hsl(180, 90%, 68%);
   --color-red-font: hsl(0, 87%, 67%);
   --color-hero-bg: hsl(0, 0%, 75%);
-  --color-main-bg: #EFF1F7;
+  --color-main-bg: #eff1f7;
   --color-footer-bg: hsl(260, 8%, 14%);
   --color-text-accent: hsl(0, 0%, 75%);
 }
@@ -27,8 +27,10 @@
 html body {
   height: 100dvh;
   width: 100%;
-  scroll-behavior: smooth;
   overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
 }
 .mob-menu-item {
   @apply text-lg text-center text-white font-bold font-shortly group-hover:text-black w-full;
@@ -37,22 +39,32 @@ html body {
   @apply px-4 md:px-8 lg:px-20 xl:px-50;
 }
 .cta-btn {
-  @apply px-6 py-2 font-shortly text-white font-bold text-lg  bg-prime-light rounded-full hover:bg-prime-hover;
+  @apply px-6 py-2 font-shortly text-white font-bold text-lg  bg-prime-light rounded-full hover:bg-prime-hover cursor-pointer;
 }
 .frm-btn {
-  @apply px-6 py-2 font-shortly text-white font-bold text-lg  bg-prime-light rounded-sm hover:bg-prime-hover;
+  @apply px-6 py-2 font-shortly text-white font-bold text-lg  bg-prime-light rounded-sm hover:bg-prime-hover cursor-pointer;
 }
-.card-title{
-  @apply text-black text-2xl font-bold font-shortly text-center lg:text-left mb-4
+.card-title {
+  @apply text-black text-2xl font-bold font-shortly text-center lg:text-left mb-4;
 }
-.boost-title{
-  @apply text-white text-3xl lg:text-4xl font-bold font-shortly   mb-4
+.boost-title {
+  @apply lg:text-left text-center text-white text-3xl lg:text-4xl font-bold font-shortly mb-4;
 }
-.card-text{
-  @apply text-text-accent text-[17px] lg:text-[15px] font-normal font-shortly text-center lg:text-left
+.footer-title {
+  @apply text-center text-white text-lg font-bold font-shortly mb-4 lg:text-left lg:w-full;
 }
+.link-text {
+  @apply text-center font-shortly text-text-accent font-normal text-lg hover:text-prime-light lg:text-left lg:w-full lg:inline-block text-nowrap ;
+}
+.crid-text {
+  @apply text-center font-shortly text-text-accent font-normal text-lg hover:text-prime-light  lg:inline-block;
+}
+.card-text {
+  @apply text-text-accent text-[17px] lg:text-[15px] font-normal font-shortly text-center lg:text-left;
+}
+
 .hover-underline-animation {
-  display: inline;
+  display: inline-block;
   position: relative;
   padding-bottom: 4px;
 }

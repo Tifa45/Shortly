@@ -18,7 +18,7 @@ function ShortenLink() {
   }, []);
 
   return (
-    <section id="#getstarted" className=" w-full mt-12 ">
+    <section id="getstarted" className=" w-full mt-12 ">
       <div className="flex flex-col justify-center items-center w-full bg-gradient-to-b from-white from-50% to-main-bg to-50%  gpad">
         <ShortenForm setUserLinks={setUserLinks} userLinks={userLinks} />
       </div>

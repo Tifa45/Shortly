@@ -23,3 +23,22 @@ export const statVars = [
       "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.",
   },
 ];
+
+export const features = [
+  { title: "Link Shortening", refr: "#getstarted" },
+  { title: "Branded Links", refr: "#" },
+  { title: "Analytics", refr: "#" },
+];
+
+export const resources = [
+  { title: "Blog", refr: "#" },
+  { title: "Developers", refr: "#" },
+  { title: "Support", refr: "#" },
+];
+
+export const company = [
+  { title: "About", refr: "#" },
+  { title: "Our Team", refr: "#" },
+  { title: "Careers", refr: "#" },
+  { title: "Contact", refr: "#" },
+];
