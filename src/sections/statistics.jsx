@@ -4,8 +4,8 @@ import Card from "../MyComponents/card";
 
 function Statistics() {
   return (
-    <section className="bg-main-bg gpad pt-8">
-      <div className="w-full p-2 flex justify-center">
+    <section className="bg-main-bg gpad py-12">
+      <div className="w-full p-2 flex justify-center mb-8">
         <div className="max-w-xl">
           <h2 className="text-black text-3xl md:text-[40px] font-bold font-shortly text-center mb-8">
             Advanced Statistics

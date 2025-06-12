@@ -1,4 +1,5 @@
 import MobNavbar from "./MyComponents/mob-navbar";
+import Boost from "./sections/boost";
 import HeroSection from "./sections/hero-section";
 import ShortenLink from "./sections/shorten-link";
 import Statistics from "./sections/statistics";
@@ -10,7 +11,8 @@ function App() {
         <MobNavbar />
         <HeroSection />
         <ShortenLink />
-        <Statistics/>
+        <Statistics />
+        <Boost />
       </div>
     </>
   );
