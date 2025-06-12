@@ -3,3 +3,23 @@ export const navLinks = [
   { title: "Pricing", ref: "#pricing" },
   { title: "Resources", ref: "#resources" },
 ];
+export const statVars = [
+  {
+    img: "icon-brand-recognition.svg",
+    title: "Brand Recognition",
+    descrioption:
+      "Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.",
+  },
+  {
+    img: "icon-detailed-records.svg",
+    title: "Detailed Records",
+    descrioption:
+      "Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.",
+  },
+  {
+    img: "icon-fully-customizable.svg",
+    title: "Fully Customizable",
+    descrioption:
+      "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.",
+  },
+];

@@ -42,7 +42,7 @@ function ShortenForm({ setUserLinks, userLinks }) {
   }
 
   return (
-    <div className="w-full bg-prime-dark relative isolate lg:h-35 rounded-md overflow-hidden">
+    <div className="w-full bg-prime-dark relative isolate lg:h-30 rounded-md overflow-hidden">
       <img
         src="bg-shorten-mobile.svg"
         alt="bg"
@@ -55,7 +55,7 @@ function ShortenForm({ setUserLinks, userLinks }) {
       />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-full flex justify-center p-4 md:p-6 lg:px-8 lg:pb-10 lg:pt-11   "
+        className="w-full flex justify-center p-4 md:p-6 lg:px-12  lg:pt-9   "
       >
         <div className="w-full flex flex-col lg:flex-row gap-4 h-fit    ">
           <div className="w-full ">

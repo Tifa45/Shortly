@@ -34,7 +34,7 @@ html body {
   @apply text-lg text-center text-white font-bold font-shortly group-hover:text-black w-full;
 }
 .gpad {
-  @apply px-4 md:px-8 lg:px-38;
+  @apply px-4 md:px-8 lg:px-20 xl:px-50;
 }
 .cta-btn {
   @apply px-6 py-2 font-shortly text-white font-bold text-lg  bg-prime-light rounded-full hover:bg-prime-hover;
@@ -42,8 +42,13 @@ html body {
 .frm-btn {
   @apply px-6 py-2 font-shortly text-white font-bold text-lg  bg-prime-light rounded-sm hover:bg-prime-hover;
 }
+.card-title{
+  @apply text-black text-2xl font-bold font-shortly text-center lg:text-left mb-4
+}
 
-
+.card-text{
+  @apply text-text-accent text-[17px] lg:text-[15px] font-normal font-shortly text-center lg:text-left
+}
 .hover-underline-animation {
   display: inline;
   position: relative;

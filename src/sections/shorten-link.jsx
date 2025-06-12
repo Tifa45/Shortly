@@ -24,7 +24,7 @@ function ShortenLink() {
       </div>
       <div className="bg-main-bg gpad pt-8 flex flex-col gap-4">
         {userLinks.map((item) => (
-          <LinksTile item={item} deleteLink={deleteLink} />
+          <LinksTile key={item.id} item={item} deleteLink={deleteLink} />
         ))}
       </div>
     </section>
