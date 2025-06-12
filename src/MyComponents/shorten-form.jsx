@@ -7,6 +7,7 @@ function ShortenForm({ setUserLinks, userLinks }) {
     handleSubmit,
     formState: { isSubmitting, errors },
     setError,
+    reset,
   } = useForm();
 
   async function onSubmit(data) {
@@ -20,21 +21,28 @@ function ShortenForm({ setUserLinks, userLinks }) {
         }
       );
       const results = await response.json();
-      const updatedLinks = [
-        ...userLinks,
-        { oldlink: data.link, shortenLink: results.result_url },
-      ];
+      //handle the respnse err
+      if (!response.ok) {
+        const errText = await response.text();
+        throw new Error(errText || "something went wrong");
+      }
+      // if response is ok
+      const newLink = {
+        id: crypto.randomUUID(),
+        oldlink: data.link,
+        shortenLink: results.result_url,
+      };
+      const updatedLinks = [...userLinks, newLink];
       setUserLinks(updatedLinks);
       localStorage.setItem("saved links", JSON.stringify(updatedLinks));
-
-      console.log(results);
+      reset();
     } catch (error) {
-      setError("link", { message: error.message });
+      setError("link", { type: "manual", message: error.message });
     }
   }
 
   return (
-    <div className="w-full bg-prime-dark relative isolate  lg:h-35  rounded-md overflow-hidden">
+    <div className="w-full bg-prime-dark relative isolate lg:h-35 rounded-md overflow-hidden">
       <img
         src="bg-shorten-mobile.svg"
         alt="bg"
@@ -47,16 +55,16 @@ function ShortenForm({ setUserLinks, userLinks }) {
       />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-full flex min-h-40 lg:h-40 justify-center items-center p-4 md:p-6 lg:px-8 lg:pb-10 lg:pt-11   "
+        className="w-full flex justify-center p-4 md:p-6 lg:px-8 lg:pb-10 lg:pt-11   "
       >
-        <div className="w-full flex flex-col lg:flex-row gap-4 h-full   ">
-          <div className="w-full   ">
+        <div className="w-full flex flex-col lg:flex-row gap-4 h-fit    ">
+          <div className="w-full ">
             <input
               {...register("link", { required: "Please enter valid link" })}
               type="text"
               placeholder="Shorten a link here..."
               className={`bg-white w-full rounded-sm py-2.5 px-4 ${
-                errors.link && "placeholder:text-red-400! outline-red-400"
+                errors.link && "placeholder:text-red-400! outline-red-400 "
               } placeholder:tracking-wide! placeholder:text-lg! border-none `}
             />
             {errors.link && (
@@ -66,7 +74,7 @@ function ShortenForm({ setUserLinks, userLinks }) {
             )}
           </div>
 
-          <div className="w-full lg:w-fit flex justify-center items-center  h-fit">
+          <div className="w-full lg:w-fit flex justify-center items-center h-fit">
             <button
               className="frm-btn flex-1 text-nowrap "
               type="submit"

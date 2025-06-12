@@ -43,6 +43,7 @@ html body {
   @apply px-6 py-2 font-shortly text-white font-bold text-lg  bg-prime-light rounded-sm hover:bg-prime-hover;
 }
 
+
 .hover-underline-animation {
   display: inline;
   position: relative;
