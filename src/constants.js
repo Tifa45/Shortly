@@ -42,3 +42,80 @@ export const company = [
   { title: "Careers", refr: "#" },
   { title: "Contact", refr: "#" },
 ];
+
+//motion variants
+
+//viewPortVariants
+export const vpVars = {
+  initial: "startStyles",
+  whileInView: "entry",
+  viewport: {
+    once: true,
+    amount: 0,
+  },
+
+  style: { originY: 0, originX: 0 },
+};
+
+export const lineAnimateHor = {
+  startStyles: {
+    scaleX: 0,
+  },
+  entry: {
+    scaleX: 1,
+    transition: { duration: 2, delay: 0.1, ease: "linear" },
+  },
+};
+export const lineAnimateVer = {
+  startStyles: {
+    scaleY: 0,
+  },
+  entry: {
+    scaleY: 1,
+    transition: { duration: 1.7, delay: 0.2, ease: "linear" },
+  },
+};
+
+export const cardParentVariants = {
+  initial: "startStyles",
+  whileInView: "entry",
+  transition: { staggerChildren: 0.7 },
+  viewport: {
+    once: true,
+    amount: 0,
+  },
+};
+export const cardAnimate = {
+  startStyles: {
+    opacity: 0,
+    y: -40,
+  },
+  entry: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0, 0.55, 0.45, 1] },
+  },
+};
+
+// default motion variants
+
+export const deafaultProps = {
+  initial: "startStyles",
+  whileInView: "entry",
+  viewport: {
+    once: true,
+    amount: 0,
+  },
+};
+
+export const popupAnimate = {
+  startStyles: {
+    opacity: 0.5,
+    scale: 0,
+  },
+  entry: (i) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.3, delay: 0.5 * i, type: "spring", bounce: .5 },
+  }),
+};
