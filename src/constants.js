@@ -99,13 +99,11 @@ export const cardAnimate = {
 
 // default motion variants
 
-export const deafaultProps = {
+export const defaultProps = {
   initial: "startStyles",
-  whileInView: "entry",
-  viewport: {
-    once: true,
-    amount: 0,
-  },
+  animate: "entry",
+  style: { originY: 0, originX: 0 },
+  transition: { staggerChildren: 0.5 },
 };
 
 export const popupAnimate = {
@@ -116,6 +114,33 @@ export const popupAnimate = {
   entry: (i) => ({
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.3, delay: 0.5 * i, type: "spring", bounce: .5 },
+    transition: { duration: 0.3, delay: 0.5 * i, type: "spring", bounce: 0.5 },
   }),
+};
+
+export const heroAnimate = {
+  startStyles: {
+    opacity: 0,
+    x: -60,
+  },
+  entry: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, ease: [0, 0.55, 0.45, 1] },
+  },
+};
+
+export const heroBtnAnimate = {
+  startStyles: {
+    rotateX: 90,
+    y: -80,
+  },
+  entry: {
+    rotateX: 0,
+    y: 0,
+    transition: {
+      default: { duration: 0.5, ease: [0, 0.55, 0.45, 1] },
+      rotateX: { duration: 0.7 },
+    },
+  },
 };

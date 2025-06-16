@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { deafaultProps, popupAnimate } from "../constants";
+import { popupAnimate } from "../constants";
 import useResized from "../hooks/resize-hook";
 function Card({ item, index }) {
   const isDesktop = useResized();
@@ -12,9 +12,8 @@ function Card({ item, index }) {
       style={{ "--mt": `${pos}px` }}
     >
       <motion.div
-        {...deafaultProps}
         custom={stagger}
-        variants={isDesktop && popupAnimate}
+        variants={popupAnimate}
         className="w-[64px] h-[64px] rounded-full bg-prime-dark flex justify-center items-center p-4 absolute left-1/2 lg:left-[20%] -translate-x-1/2 top-0 -translate-y-1/2"
       >
         <img src={item.img} alt="icon" className="w-fit" />

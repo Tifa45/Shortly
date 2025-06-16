@@ -29,7 +29,7 @@ function Statistics() {
         <motion.div
           {...vpVars}
           variants={isDesktop ? lineAnimateHor : lineAnimateVer}
-          className="h-full w-[6px] bg-prime-light absolute left1/2  -z-10 lg:h-[6px] lg:w-full lg:left-0 lg:top-1/2 lg:translate-y-6"
+          className="h-full w-[6px] bg-prime-light absolute left1/2 top-20  -z-10 lg:h-[6px] lg:w-full lg:left-0 lg:top-1/2 lg:translate-y-6"
         ></motion.div>
         <motion.div {...cardParentVariants} className="flex flex-col items-center lg:justify-center relative overflow-hidden pt-8 gap-18 lg:gap-6 isolate lg:flex-row" >
           {statVars.map((item, index) => (

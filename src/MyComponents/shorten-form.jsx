@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
 function ShortenForm({ setUserLinks, userLinks }) {
@@ -12,14 +11,11 @@ function ShortenForm({ setUserLinks, userLinks }) {
 
   async function onSubmit(data) {
     try {
-      const response = await fetch(
-        "https://cors-anywhere.herokuapp.com/https://cleanuri.com/api/v1/shorten",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams({ url: data?.link }).toString(),
-        }
-      );
+      const response = await fetch("https:///api/shorten", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url: data.link }),
+      });
       const results = await response.json();
       //handle the respnse err
       if (!response.ok) {
