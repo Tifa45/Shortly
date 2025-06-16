@@ -11,7 +11,7 @@ function ShortenForm({ setUserLinks, userLinks }) {
 
   async function onSubmit(data) {
     try {
-      const response = await fetch("https:///api/shorten", {
+      const response = await fetch("https://api/shorten", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url: data.link }),
